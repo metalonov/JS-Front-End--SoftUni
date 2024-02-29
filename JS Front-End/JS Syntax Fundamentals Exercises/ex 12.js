@@ -1,6 +1,6 @@
 function solve(number, action1, action2, action3, action4, action5) {
 
-    let intNumber = parseFloat(number);
+    let intNumber = parseInt(number);
     const actions = [];
     actions.push(action1, action2, action3, action4, action5)
 

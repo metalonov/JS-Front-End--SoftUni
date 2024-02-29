@@ -1,5 +1,4 @@
 function func(match, text) {
-
     let lowercase = text.toLowerCase().split(' ');
 
     if (lowercase.includes(match)) {
@@ -8,7 +7,5 @@ function func(match, text) {
         console.log(`${match} not found!`);
     }
 
-
 }
-func('python',
-'JavaScript is the best programming language');
+func('python', 'JavaScript is the best programming language');
