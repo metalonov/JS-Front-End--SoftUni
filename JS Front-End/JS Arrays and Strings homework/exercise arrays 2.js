@@ -1,4 +1,4 @@
-function arrayStringDemo(array, stepping) {
+function solve(array, stepping) {
 
     let arrayLength = array.length;
     let newArr = [];
@@ -9,7 +9,9 @@ function arrayStringDemo(array, stepping) {
         newArr.push(currentNumber)
     }
     
-       return newArr;
+    return newArr;
     
 }
-arrayStringDemo(['5', '20', '31', '4', '20'], 2);
+// solve(['5', '20', '31', '4', '20'], 2);
+// solve(['dsa', 'asd', 'test', 'tset'], 2);
+solve(['1', '2', '3', '4', '5'], 6);

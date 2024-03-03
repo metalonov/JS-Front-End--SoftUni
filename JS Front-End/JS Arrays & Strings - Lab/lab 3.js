@@ -17,6 +17,8 @@ function solve(arr){
     
     let diff = evenSum - oddSum;
     console.log(diff);
+    //==============================
+    //console.log(arr.reduce((sum, num) => num % 2 === 0 ? sum + num : sum - num, 0)); - single line solution
 }
 // solve([1,2,3,4,5,6]);
 // solve([3,5,7,9]);
