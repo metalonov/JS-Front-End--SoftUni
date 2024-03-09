@@ -3,15 +3,14 @@
 function solve(num) {
 
     let arr = num
-    .toString()
-    .split('');
+        .toString()
+        .split('');
     let oddsum = 0;
     let evensum = 0;
 
     while (arr.length > 0) {
         let lastDigit = Number(
-            arr
-        .pop()
+            arr.pop()
         );
         if (lastDigit % 2 == 0) {
             evensum += lastDigit;

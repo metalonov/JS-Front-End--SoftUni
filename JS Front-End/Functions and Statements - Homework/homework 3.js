@@ -9,16 +9,20 @@ function solve(char1, char2) {
         for (let i = endCode + 1; i < startCode; i++) {
             arr.push(String.fromCharCode(i));
         }
+
     }
+
     else {
         for (let i = startCode + 1; i < endCode; i++) {
             arr.push(String.fromCharCode(i));
         }
+        
     }
     
     console.log(arr.join(' '));
 
 }
+
 // solve('a', 'd');
 // solve('#', ':');
 solve('C', '#');
