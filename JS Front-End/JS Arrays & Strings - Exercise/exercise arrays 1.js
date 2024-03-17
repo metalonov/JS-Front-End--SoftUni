@@ -1,5 +1,4 @@
-function arrayStringDemo(array, rotations){
-    let arr = array;
+function arrayStringDemo(arr, rotations){
 
     for (let index = 0; index < rotations; index++){
         

@@ -2,6 +2,7 @@ function loading(progress){
 
 
     if (progress === 100) {
+        
         console.log(`100% Complete!`);
         console.log(`[%%%%%%%%%%]`);
     }

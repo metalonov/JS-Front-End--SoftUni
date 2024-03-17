@@ -15,6 +15,6 @@ function func(words, array) {
         }
     }
 
-     console.log(textArr.join(' '));
+    console.log(textArr.join(' '));
 }
 func('great, learning', 'softuni is ***** place for ******** new programming languages');
