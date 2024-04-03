@@ -14,7 +14,7 @@ function encodeAndDecodeMessages() {
     secondTextButtonElement.addEventListener('click', () => {
         const originalText = secondTextBoxElement.value;
         secondTextBoxElement.value = '';
-        firstTextBoxElement.value = shiftString(originalText, false);
+        secondTextBoxElement.value = shiftString(originalText, false);
     })
 
     function shiftString(str, up) {
