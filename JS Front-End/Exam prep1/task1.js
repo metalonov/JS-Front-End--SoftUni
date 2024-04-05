@@ -16,6 +16,7 @@ function solve(input) {
         team.push(member);
     }
 
+    
 
     for (let arguments of commands) {
         arguments = arguments.split(' / ')
@@ -38,32 +39,51 @@ function solve(input) {
                 }
                 break;
             case "Learn":
-                const drinkFind = person.drinks.find(d => d.drinks === arguments[2])
-                const personName = arguments[1];
+                let drinkFind = person.drinks.find(d => d === arguments[2])
                 const drinkName = arguments[2];
                 if (drinkFind === undefined) {
-                    team[personName].drinks.push(drinkName);
-                    console.log(`${person.pName} has learned a new coffee type: ${drinkFind}.`);
+                    person.drinks.push(drinkName);
+                    console.log(`${person.pName} has learned a new coffee type: ${drinkName}.`);
                 } else {
                     console.log(`${person.pName} knows how to make ${arguments[2]}.`);
                 }
                 break;
             case "Closed":
-                return;
+                break;
         }
 
     }
 
+    for (const member of team) {
+        console.log(`Barista: ${member.pName}, Shift: ${member.shift}, Drinks: ${member.drinks.join(', ')}`);
+    }
+    
 }
 
-solve([
-    '3',
-    'Alice day Espresso,Cappuccino',
-    'Bob night Latte,Mocha',
-    'Carol day Americano,Mocha',
-    'Prepare / Alice / day / Espresso',
-    'Change Shift / Bob / night',
-    'Learn / Carol / Latte',
-    'Learn / Bob / Latte',
-    'Prepare / Bob / night / Latte',
-    'Closed']);
+// solve([
+//     '3',
+//     'Alice day Espresso,Cappuccino',
+//     'Bob night Latte,Mocha',
+//     'Carol day Americano,Mocha',
+//     'Prepare / Alice / day / Espresso',
+//     'Change Shift / Bob / night',
+//     'Learn / Carol / Latte',
+//     'Learn / Bob / Latte',
+//     'Prepare / Bob / night / Latte',
+//     'Closed']);
+
+solve(['4',
+'Alice day Espresso,Cappuccino',
+'Bob night Latte,Mocha',
+'Carol day Americano,Mocha',
+'David night Espresso',
+'Prepare / Alice / day / Espresso',
+'Change Shift / Bob / day',
+'Learn / Carol / Latte',
+'Prepare / Bob / night / Latte',
+'Learn / David / Cappuccino',
+'Prepare / Carol / day / Cappuccino',
+'Change Shift / Alice / night',
+ 'Learn / Bob / Mocha',
+'Prepare / David / night / Espresso',
+'Closed']);
